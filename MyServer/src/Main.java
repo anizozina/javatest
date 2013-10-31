@@ -4,7 +4,7 @@ import java.net.Socket;
 
 public class Main {
 
-	private final static String PORT = 8081
+	private final static int PORT = 8081
 	public static void main(String[] args) {
 		try {
 			ServerSocket serverSocket = new ServerSocket(PORT);
