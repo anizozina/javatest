@@ -3,9 +3,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Main {
+
+	private final static String PORT = 8081
 	public static void main(String[] args) {
 		try {
-			ServerSocket serverSocket = new ServerSocket(8081);
+			ServerSocket serverSocket = new ServerSocket(PORT);
 			while (true) {
 				Socket socket = serverSocket.accept();
 				MyThread thread = new MyThread();
@@ -13,7 +15,6 @@ public class Main {
 				thread.run();
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
